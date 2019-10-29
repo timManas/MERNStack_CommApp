@@ -15,4 +15,9 @@ Referred to as Zero configuration framework
 
 2. When building applications, we can utilize a component library called SemanticUI React
  
-Related to next.js
+4. nProgress is a dependency library which helps displays a progress bar when we switch between different pages
+
+5. Since React 16.7, we have the ability to make request to an external API from FUNCTIONAL components using React Hooks. 
+
+6. useEffect is performing an API call to the outside world (ex. Server)5. Since React 16.7, we have the ability to make request to an external API from FUNCTIONAL components using React Hooks. 
+
