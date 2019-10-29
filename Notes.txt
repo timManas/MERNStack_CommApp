@@ -1,0 +1,18 @@
+Notes for this lesson
+
+1. "next" dependecies is a framework which helps users build the framework which would normally rrequire alot of code and configuraion.
+Referred to as Zero configuration framework 
+- Not a replacement for React.
+- Helps build react framework faster 
+- Supports hot code reloading
+- Very similar to CreateReactApp
+
+2. Difference between NextJS vs CreateReactApp
+- Next uses Server side rendering while CreateReactApp uses client side rendering
+- From a performance perspective, NextJS is faster loading application
+
+3. When an application first load, it can use SSR(NextJS) to fetch the data which can move over to CSR. This is because NextJS is isomorphic/universal rendering 
+
+2. When building applications, we can utilize a component library called SemanticUI React
+ 
+Related to next.js
