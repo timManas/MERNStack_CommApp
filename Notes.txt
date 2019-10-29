@@ -21,3 +21,6 @@ Referred to as Zero configuration framework
 
 6. useEffect is performing an API call to the outside world (ex. Server)5. Since React 16.7, we have the ability to make request to an external API from FUNCTIONAL components using React Hooks. 
 
+
+7. In JS, static methods can be accessed classes 
+
