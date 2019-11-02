@@ -9,7 +9,7 @@ class MyApp extends App {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    return { pageProps };
+    return { pageProps };   // after returning pageProps, we now have pageProps in the properties available below
   }
 
   render() {

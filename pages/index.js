@@ -1,9 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 
-// This is where the object gets rendered
+// This is final place after 'render' in the _app.js
 function Home({ products }) {
-  console.log(products);
+  //console.log(products);    // PageProps is present here as well
+  
   // Note the code below in Home method is suited for Client Side Rendering (CSR)
   // React.useEffect(() => {
   //   getProducts();
@@ -29,7 +30,7 @@ function Home({ products }) {
 // This gets some initial data which will be added to the props pf the component itself
 
 Home.getInitialProps = async () => {
-  
+
   // 1. fetch data on server
   const url = "http://localhost:3000/api/products";
   const response = await axios.get(url);
@@ -38,7 +39,7 @@ Home.getInitialProps = async () => {
   // note: this object will be merged with existing props
   return { products: response.data };
   
-  
+  // Note flow is from indexjs -> _app.js for the initialProps
 };
 
 export default Home;
