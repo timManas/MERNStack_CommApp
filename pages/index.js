@@ -3,7 +3,7 @@ import axios from 'axios'
 
 // This is final place after 'render' in the _app.js
 function Home({ products }) {
-  //console.log(products);    // PageProps is present here as well
+  console.log(products);    // PageProps is present here as well
   
   // Note the code below in Home method is suited for Client Side Rendering (CSR)
   // React.useEffect(() => {

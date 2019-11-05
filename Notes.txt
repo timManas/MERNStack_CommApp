@@ -24,3 +24,4 @@ Referred to as Zero configuration framework
 
 7. In JS, static methods can be accessed classes 
 
+8. You can import data into MongoDB using mongoImport... Go to mongoDB website > Command line tools > Data Import and Export Tools  > copy package monogoimport 
