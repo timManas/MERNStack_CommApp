@@ -25,3 +25,8 @@ Referred to as Zero configuration framework
 7. In JS, static methods can be accessed classes 
 
 8. You can import data into MongoDB using mongoImport... Go to mongoDB website > Command line tools > Data Import and Export Tools  > copy package monogoimport 
+
+9. return <Card.Group  stackable itemsPerRow="3" centered items={mapProductsToItems(products)} /> 
+- Here you set the individual card component using semantic-UI
+- You also set 3 card per row
+- You also allow for stackable responsive UI for mobile devices. Hence it doesn't looks weird on phones

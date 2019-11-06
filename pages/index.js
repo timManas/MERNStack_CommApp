@@ -1,22 +1,13 @@
 import React from 'react'
 import axios from 'axios'
+import ProductList from '../components/Index/ProductList'
 
 // This is final place after 'render' in the _app.js
 function Home({ products }) {
-  console.log(products);    // PageProps is present here as well
-  
-  // Note the code below in Home method is suited for Client Side Rendering (CSR)
-  // React.useEffect(() => {
-  //   getProducts();
-  // }, []);
 
-  // async function getProducts() {
-  //   const url = "http://localhost:3000/api/products";
-  //   const response = await axios.get(url);
-  //   console.log(response.data);
-  // }
 
-  return <>home</>;
+
+  return <ProductList products={products} />
 }
 
 
