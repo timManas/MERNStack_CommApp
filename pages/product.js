@@ -11,7 +11,7 @@ function Product({ product }) {
       <ProductSummary {...product} />
       <ProductAttributes {...product} />
     </>
-  );
+  )
 }
 
 Product.getInitialProps = async ({ query: { _id }}) => {

@@ -5,9 +5,6 @@ import baseUrl from '../utils/baseUrl'
 
 // This is final place after 'render' in the _app.js
 function Home({ products }) {
-
-
-
   return <ProductList products={products} />
 }
 

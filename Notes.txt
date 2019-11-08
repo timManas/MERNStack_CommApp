@@ -30,3 +30,7 @@ Referred to as Zero configuration framework
 - Here you set the individual card component using semantic-UI
 - You also set 3 card per row
 - You also allow for stackable responsive UI for mobile devices. Hence it doesn't looks weird on phones
+
+10. In order to use state, you will need to use "React" 
+
+11. we use an inline function "() =>" so that it doesn't execute the code when it first mounts
