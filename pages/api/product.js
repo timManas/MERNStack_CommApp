@@ -40,20 +40,27 @@ async function handleGetRequest(req, res) {
     res.status(200).json(product)
 }
 
+// We validate the request and check if there is an error which occured in the server
 async function handlePostRequest(req, res) {
+
     const {name, price, description, mediaUrl} = req.body
-    if(!name || !price || !description || !mediaUrl) {
-        return res.status(422).send("Product missing one or more fields ")
+    try {
+        if(!name || !price || !description || !mediaUrl) {
+            return res.status(422).send("Product missing one or more fields ")
+        }
+
+        const product = await new Product({
+            name,
+            price, 
+            description,
+            mediaUrl
+        }).save()
+        res.status(201).json(product)
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error creating product")       // Server error
     }
-
-    const product = await new Product({
-        name,
-        price, 
-        description,
-        mediaUrl
-    }).save()
-    res.status(201).json(product)
-
 }
 
 async function handleDeleteRequest(req, res) {
