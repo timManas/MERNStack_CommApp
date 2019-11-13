@@ -1,4 +1,4 @@
-function catchErrors(errors, displayError)  {
+function catchErrors(error, displayError)  {
     let errorMsg;
     if (error.response) {
         // Request was made and server responded with a status code 2xx 
@@ -25,3 +25,4 @@ function catchErrors(errors, displayError)  {
 }
 
 export default catchErrors
+
