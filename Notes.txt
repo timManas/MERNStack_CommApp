@@ -34,3 +34,5 @@ Referred to as Zero configuration framework
 10. In order to use state, you will need to use "React" 
 
 11. we use an inline function "() =>" so that it doesn't execute the code when it first mounts
+
+12. Use bcrypt to hash a password
