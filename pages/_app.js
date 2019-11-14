@@ -4,6 +4,8 @@ import { parseCookies, destroyCookie } from "nookies";
 import { redirectUser } from "../utils/auth";
 import baseUrl from "../utils/baseUrl";
 import axios from "axios";
+import Router from "next/router";
+
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -46,6 +48,18 @@ class MyApp extends App {
     }
 
     return { pageProps };
+  }
+
+  componentDidMount() {
+    window.addEventListener('storage', this.syncLogout)
+  }
+
+  // This is a trick for Universal logout once one browser logs out, the other open browsers will logout as well
+  syncLogout = event => {
+    if (event.key === 'logout') {
+      console.log("logged out from storage")
+      Router.push('/login')
+    }
   }
 
   render() {
