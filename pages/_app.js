@@ -27,15 +27,21 @@ class MyApp extends App {
         const url = `${baseUrl}/api/account`;
         const response = await axios.get(url, payload);
         const user = response.data;
+        const isRoot = user.role === "root";
+        const isAdmin = user.role === "admin";
+        // if authenticated, but not of role 'admin' or 'root', redirect from '/create' page
+        const isNotPermitted =
+          !(isRoot || isAdmin) && ctx.pathname === "/create";
+        if (isNotPermitted) {
+          redirectUser(ctx, "/");
+        }
         pageProps.user = user;
       } catch (error) {
         console.error("Error getting current user", error);
-
-        // 1. Throw out invalid token
-        destroyCookie(ctx, "token")
-
-        // 2. Redirect to login
-        redirectUser(ctx, "/login")
+        // 1) Throw out invalid token
+        destroyCookie(ctx, "token");
+        // 2) Redirect to login
+        redirectUser(ctx, "/login");
       }
     }
 
