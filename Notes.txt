@@ -36,3 +36,5 @@ Referred to as Zero configuration framework
 11. we use an inline function "() =>" so that it doesn't execute the code when it first mounts
 
 12. Use bcrypt to hash a password
+
+13. use library "nookies" to store cookies
