@@ -3,12 +3,10 @@ import ProductSummary from "../components/Product/ProductSummary";
 import ProductAttributes from "../components/Product/ProductAttributes";
 import baseUrl from "../utils/baseUrl";
 
-// This is the Product page when you click on an individual card
-// Notice the Summary goes first before the Attribute
 function Product({ product, user }) {
   return (
     <>
-      <ProductSummary {...product} />
+      <ProductSummary user={user} {...product} />
       <ProductAttributes user={user} {...product} />
     </>
   );
